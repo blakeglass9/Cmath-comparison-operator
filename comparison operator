@@ -1,0 +1,53 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Print initial title of the program
+        Console.WriteLine("Anonymous Income Comparison Program");
+
+        // Person 1 input section
+        Console.WriteLine("Person 1");
+        // Ask for hourly rate and read input for Person 1
+        Console.WriteLine("Hourly Rate?");
+        double hourlyRate1 = Convert.ToDouble(Console.ReadLine());
+
+        // Ask for hours worked per week and read input for Person 1
+        Console.WriteLine("Hours worked per week?");
+        double hoursWorked1 = Convert.ToDouble(Console.ReadLine());
+
+        // Person 2 input section
+        Console.WriteLine("Person 2");
+        // Ask for hourly rate and read input for Person 2
+        Console.WriteLine("Hourly Rate?");
+        double hourlyRate2 = Convert.ToDouble(Console.ReadLine());
+
+        // Ask for hours worked per week and read input for Person 2
+        Console.WriteLine("Hours worked per week?");
+        double hoursWorked2 = Convert.ToDouble(Console.ReadLine());
+
+        // Calculate annual salary for Person 1
+        double annualSalary1 = hourlyRate1 * hoursWorked1 * 52;
+        // Calculate annual salary for Person 2
+        double annualSalary2 = hourlyRate2 * hoursWorked2 * 52;
+
+        // Output the annual salary for Person 1
+        Console.WriteLine("Annual salary of Person 1:");
+        Console.WriteLine(annualSalary1);
+
+        // Output the annual salary for Person 2
+        Console.WriteLine("Annual salary of Person 2:");
+        Console.WriteLine(annualSalary2);
+
+        // Compare the salaries of Person 1 and Person 2
+        bool doesPerson1MakeMore = annualSalary1 > annualSalary2;
+
+        // Output the comparison result
+        Console.WriteLine("Does Person 1 make more money than Person 2?");
+        Console.WriteLine(doesPerson1MakeMore);
+
+        // Pause the program so that the output can be viewed
+        Console.ReadKey();
+    }
+}
